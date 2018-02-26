@@ -65,7 +65,7 @@ This will return a `StreamMetadataResult`. The fields on this result are:
             <td>True is the stream is deleted, false otherwise.</td>
         </tr>
         <tr>
-            <td><code>int MetastreamVersion</code></td>
+            <td><code>long MetastreamVersion</code></td>
             <td>The version of the metastream format</td>
         </tr>
         <tr>
@@ -86,15 +86,15 @@ You can then access the `StreamMetadata` via the `StreamMetadata` object. It con
     </thead>
     <tbody>
         <tr>
-            <td><code>int? MaxAge</code></td>
+            <td><code>long? MaxAge</code></td>
             <td>The maximum age of events in the stream. Items older than this will be automatically removed.</td>
         </tr>
         <tr>
-            <td><code>int? MaxCount</code></td>
+            <td><code>long? MaxCount</code></td>
             <td>The maximum count of events in the stream. When you have more than count the oldest will be removed.</td>
         </tr>
         <tr>
-            <td><code>int? TruncateBefore</code></td>
+            <td><code>long? TruncateBefore</code></td>
             <td>When set says that items prior to event 'E' can be truncated and will be removed.</td>
         </tr>
         <tr>
@@ -133,7 +133,7 @@ This will return a `RawStreamMetadataResult`. The fields on this result are:
             <td>True is the stream is deleted, false otherwise.</td>
         </tr>
         <tr>
-            <td><code>int MetastreamVersion</code></td>
+            <td><code>long MetastreamVersion</code></td>
             <td>The version of the metastream (see <a href="../optimistic-concurrency-and-idempotence">Expected Version</a>)</td>
         </tr>
         <tr>
@@ -166,7 +166,7 @@ The `StreamMetadata` passed here has a builder that you can access via the `Stre
     </thead>
     <tbody>
         <tr>
-            <td><code>SetMaxCount(int count)</code></td>
+            <td><code>SetMaxCount(long count)</code></td>
             <td>Sets the maximum count of events in the stream.</td>
         </tr>
         <tr>
@@ -174,7 +174,7 @@ The `StreamMetadata` passed here has a builder that you can access via the `Stre
             <td>Sets the maximum age of events in the stream.</td>
         </tr>
         <tr>
-            <td><code>SetTruncateBefore(int seq)</code></td>
+            <td><code>SetTruncateBefore(long seq)</code></td>
             <td>Sets the event number from which previous events can be scavenged.<</td>
         </tr>
         <tr>
